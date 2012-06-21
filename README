@@ -1,0 +1,47 @@
+
+helloworld is template project for GNU open-source style that fork from fuse-google-drive project.
+
+Build Dependencies:
+	autotools
+	make
+
+If you are on one of the systems that does not include development files with
+packages, then make sure you install the development packages for each of the
+dependencies.
+
+Compilation:
+	$ ./autogen.sh
+	$ ./configure
+	$ make
+
+Thanks to:
+	jcline/fuse-google-drive.GitHub(https://github.com/jcline/fuse-google-drive)
+
+
+Howto use GNU autotools to generate platform-dependency Makefile.
+
+Step:
+1. Prepare "configure.ac" for GNU aclocal.
+
+2. Run "aclocal" to generate some files.
+       aclocal.m4
+       autom4te.cache/
+
+3. Prepare "Makefile.am" for GNU automake.
+
+3. Run "automake --add-missing --copy" to generate some files:
+       Makefile.in
+       config.guess
+       config.sub
+       depcomp
+       install-sh
+       missing
+
+4. Run "autoconf" to generate final files:
+       configure
+
+5. Run "configure" to generate "Makefile", and then you can build your source.
+
+Sample at https://github.com/yellowgithub/helloworld.git
+
+
